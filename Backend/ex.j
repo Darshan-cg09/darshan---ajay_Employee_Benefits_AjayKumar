@@ -20,12 +20,12 @@ const pool = new Pool({
 app.use(cors({
   origin: [
     process.env.FRONTEND_URL,
-    "http://localhost:3001",
-    "http://127.0.0.1:5500",
-    "http://localhost:5500",
+    "http://16.171.147.226:3001",
+    "http://16.171.147.226:5500",
+    "http://16.171.147.226:5500",
     "http://127.0.0.1:5501", // Added to fix CORS error
-    "http://localhost:8081", // Added for future port flexibility
-    "http://localhost:8089"  // Added for future port flexibility
+    "http://16.171.147.226:8081", // Added for future port flexibility
+    "http://16.171.147.226:8089"  // Added for future port flexibility
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
@@ -130,5 +130,5 @@ app.get('/hr', (req, res) => {
 
 // Start server
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+  console.log(`Server running on http://16.171.147.226:${port}`);
 });
